@@ -1,0 +1,75 @@
+.main {
+  @include flex(center);
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background: linear-gradient(270deg, #479aff, #bfff75, #99b9ff, #84a5fa);
+  background-size: 400% 400%;
+
+  animation: gradientAnimation 10s ease infinite;
+
+  .container {
+    width: 1600px;
+
+    &__h1Box {
+      width: 100%;
+      margin-bottom: 70px;
+
+      h1 {
+        font-size: 80px;
+        font-weight: bold;
+        color: #479aff;
+      }
+    }
+
+    &__h2Box {
+      width: 60%;
+      margin-bottom: 70px;
+
+      h2 {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+
+    &__h3Box {
+      width: 40%;
+      h3 {
+        font-size: 19px;
+        color: #bcfd9d;
+      }
+    }
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  10% {
+    background-position: 25% 60%;
+  }
+  20% {
+    background-position: 50% 40%;
+  }
+  30% {
+    background-position: 75% 65%;
+  }
+  40% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 75% 35%;
+  }
+  60% {
+    background-position: 50% 70%;
+  }
+  70% {
+    background-position: 25% -10%;
+  }
+}
